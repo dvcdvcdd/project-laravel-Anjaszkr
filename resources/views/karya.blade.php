@@ -8,6 +8,8 @@
     <script>
         tailwind.config = { theme: { extend: { colors: { primary: '#f59e0b', } } } }
     </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" rel="stylesheet" />
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
@@ -85,7 +87,25 @@
 
         </div>
     </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup-templating.min.js"></script>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-php.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                if (!block.className.includes('language-')) {
+                    block.classList.add('language-php');
+                }
+            });
+            Prism.highlightAll();
+        });
+    </script>
 </body>
      <footer class="bg-slate-900 text-slate-300 py-12 border-t-4 border-primary">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
