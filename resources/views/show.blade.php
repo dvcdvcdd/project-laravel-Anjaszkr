@@ -43,9 +43,10 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup-templating.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-php.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
@@ -53,11 +54,13 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            // Cari semua kode dari Filament dan paksa baca sebagai HTML/PHP
-            document.querySelectorAll('pre code').forEach((block) => {
-                block.classList.add('language-html');
+            document.querySelectorAll('pre').forEach((pre) => {
+                pre.classList.add('language-markup');
             });
-            // Nyalakan warnanya!
+            document.querySelectorAll('pre code').forEach((block) => {
+                block.classList.add('language-markup');
+            });
+
             Prism.highlightAll();
         });
     </script>
