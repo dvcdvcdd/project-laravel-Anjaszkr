@@ -19,7 +19,7 @@ Untuk menjalankan proyek ini di komputer lokal, ikuti langkah-langkah berikut:
 2. Masuk ke direktori proyek:
    cd NAMA_REPO
    
-3. Install dependency(jika belum):
+3. Install dependency:
    composer install
    npm install && npm run build
    
